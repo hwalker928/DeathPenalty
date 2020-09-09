@@ -25,6 +25,7 @@ public class DeathPenalty extends JavaPlugin {
         if(getConfig().getBoolean("sponsorMessage")) {
             Bukkit.getConsoleSender().sendMessage("DeathPenalty has loaded.\n\n" + ChatColor.WHITE + "" + ChatColor.BOLD + "===========================\n" + ChatColor.RESET + "" + ChatColor.AQUA + "Sponsored by " + ChatColor.GREEN + ChatColor.BOLD + "AccurateNode" + ChatColor.RESET + ChatColor.AQUA + "!\n" + ChatColor.GOLD + "Use code ENDERTWEAKS for 15% off your first month of hosting!\n" + ChatColor.WHITE + "" + ChatColor.BOLD + "===========================\n\n");
         }
+        this.getCommand("dpreload").setExecutor(new DPReload(this));
     }
 
 
