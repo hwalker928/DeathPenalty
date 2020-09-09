@@ -1,0 +1,1 @@
+Spigot 1.16.2 - https://www.spigotmc.org/wiki/buildtools/#1-16-2Vault - https://dev.bukkit.org/projects/vaultPlaceHolderAPI - https://www.spigotmc.org/resources/placeholderapi.6245/
