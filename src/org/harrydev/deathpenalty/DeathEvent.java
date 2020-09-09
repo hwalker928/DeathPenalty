@@ -37,7 +37,7 @@ public class DeathEvent implements Listener {
             //p.sendMessage(String.valueOf(k));
             String old1 = "%vault_eco_balance_formatted%";
             String newlevel = PlaceholderAPI.setPlaceholders(p, old1);
-            p.sendMessage(Objects.requireNonNull(config.getString("prefix")).replace("&", "§") + Objects.requireNonNull(config.getString("deathMessage")).replace("&", "§").replace("%amount%", String.valueOf(newlevel)));
+            p.sendMessage(Objects.requireNonNull(config.getString("prefix")).replace("&", "§") + Objects.requireNonNull(config.getString("deathMessage")).replace("&", "§").replace("%amount%", String.valueOf(k)));
         }
         else if(Objects.requireNonNull(config.getString("lossType")).equalsIgnoreCase("fixed")) {
             int percent = config.getInt("amountLost");

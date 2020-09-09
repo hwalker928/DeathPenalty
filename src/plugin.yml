@@ -1,5 +1,5 @@
 name: DeathPenalty
-version: 1.1.0
+version: 1.1.1
 description: A plugin to take money away from players on death.
 api-version: 1.13
 main: org.harrydev.deathpenalty.DeathPenalty

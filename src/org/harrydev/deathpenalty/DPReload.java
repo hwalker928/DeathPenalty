@@ -5,7 +5,9 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.configuration.file.YamlConfiguration;
 
+import java.io.File;
 import java.util.Objects;
 
 public class DPReload implements CommandExecutor {
@@ -22,8 +24,9 @@ public class DPReload implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
         if(commandSender.hasPermission("deathpenalty.reload")) {
-            plugin.reloadConfig();
-            commandSender.sendMessage(Objects.requireNonNull(config.getString("prefix")).replace("&", "§") + Objects.requireNonNull(config.getString("reloadConfig")).replace("&", "§"));
+            //plugin.reloadConfig();
+            commandSender.sendMessage("coming soon!");
+            //commandSender.sendMessage(Objects.requireNonNull(config.getString("prefix")).replace("&", "§") + Objects.requireNonNull(config.getString("reloadConfig")).replace("&", "§"));
         }
         return false;
     }
