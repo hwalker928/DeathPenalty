@@ -1,0 +1,18 @@
+# ======================================
+# DeathPenalty
+# Created by EnderTweaks
+# ======================================
+
+# Valid options are "percentage" and "fixed"
+lossType: "percentage"
+
+# Only used if lossType is percentage
+percentageLost: 50
+
+# Only used if lossType is fixed
+amountLost: 100
+
+# Messages
+prefix: "&6[&c&lDP&6]&r "
+reloadConfig: "&bThe config has been reloaded."
+deathMessage: "&cYou died and lost &7$%amount%&c!"

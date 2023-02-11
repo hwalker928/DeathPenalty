@@ -1,0 +1,13 @@
+name: DeathPenalty
+version: '${version}'
+main: link.harryw.deathpenalty.DeathPenalty
+authors: [ EnderTweaks ]
+description: A plugin to take money away from players on death.
+depend: [ Vault ]
+commands:
+  dpreload:
+    description: Reloads the config for DealthPenalty
+    permission: deathpenalty.reload
+permissions:
+  deathpenalty.reload:
+    description: allows you to use /dpreload
