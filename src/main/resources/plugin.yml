@@ -6,7 +6,7 @@ description: A plugin to take money away from players on death.
 depend: [ Vault ]
 commands:
   dpreload:
-    description: Reloads the config for DealthPenalty
+    description: Reloads the config for DeathPenalty
     permission: deathpenalty.reload
 permissions:
   deathpenalty.reload:
