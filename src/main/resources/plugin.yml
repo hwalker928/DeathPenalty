@@ -10,4 +10,4 @@ commands:
     permission: deathpenalty.reload
 permissions:
   deathpenalty.reload:
-    description: allows you to use /dpreload
+    description: Allows you to use /dpreload
