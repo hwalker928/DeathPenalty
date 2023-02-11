@@ -2,9 +2,7 @@ package link.harryw.deathpenalty;
 
 import link.harryw.deathpenalty.commands.DPReload;
 import link.harryw.deathpenalty.events.DeathEvent;
-import net.md_5.bungee.api.ChatColor;
 import net.milkbowl.vault.economy.Economy;
-import org.bukkit.Bukkit;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
