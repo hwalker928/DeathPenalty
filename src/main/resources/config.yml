@@ -6,10 +6,12 @@
 # Valid options are "percentage" and "fixed"
 lossType: "percentage"
 
-# Only used if lossType is percentage
+# The percentage of total money players will lose on death
+# Only used if lossType is set to "percentage"
 percentageLost: 50
 
-# Only used if lossType is fixed
+# The fixed amount of money players will lose on death
+# Only used if lossType is set to "fixed"
 amountLost: 100
 
 # Messages
