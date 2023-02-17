@@ -1,7 +1,7 @@
 package link.harryw.deathpenalty;
 
 import link.harryw.deathpenalty.commands.DPReload;
-import link.harryw.deathpenalty.events.DeathEvent;
+import link.harryw.deathpenalty.events.RespawnEvent;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -22,7 +22,7 @@ public final class DeathPenalty extends JavaPlugin {
             return;
         }
         saveDefaultConfig();
-        getServer().getPluginManager().registerEvents(new DeathEvent(this), this);
+        getServer().getPluginManager().registerEvents(new RespawnEvent(this), this);
         this.getCommand("dpreload").setExecutor(new DPReload(this));
     }
 

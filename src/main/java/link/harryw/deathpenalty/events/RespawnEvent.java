@@ -7,21 +7,21 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.entity.PlayerDeathEvent;
+import org.bukkit.event.player.PlayerRespawnEvent;
 
-public class DeathEvent implements Listener {
+public class RespawnEvent implements Listener {
 
     private final Economy econ;
     private final DeathPenalty plugin;
 
-    public DeathEvent(DeathPenalty plugin) {
+    public RespawnEvent(DeathPenalty plugin) {
         this.plugin = plugin;
         this.econ = DeathPenalty.econ;
     }
 
     @EventHandler
-    public void deathEvent(PlayerDeathEvent e) {
-        Player p = e.getEntity().getPlayer();
+    public void respawnEvent(PlayerRespawnEvent e) {
+        Player p = e.getPlayer();
         FileConfiguration config = plugin.getConfig();
 
         double currentBalance = econ.getBalance(p);
@@ -29,7 +29,7 @@ public class DeathEvent implements Listener {
 
         if(config.getString("lossType").equalsIgnoreCase("percentage")) {
             int percentageAmount = config.getInt("percentageLost");
-            withdrawAmount = currentBalance*(percentageAmount/100.0f);
+            withdrawAmount = currentBalance*(percentageAmount / 100.0f);
         } else if(config.getString("lossType").equalsIgnoreCase("fixed")) {
             withdrawAmount = config.getInt("amountLost");
         }
