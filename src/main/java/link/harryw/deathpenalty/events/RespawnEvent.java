@@ -27,15 +27,17 @@ public class RespawnEvent implements Listener {
         double currentBalance = econ.getBalance(p);
         double withdrawAmount = 0.0f;
 
-        if(config.getString("lossType").equalsIgnoreCase("percentage")) {
-            int percentageAmount = config.getInt("percentageLost");
-            withdrawAmount = currentBalance*(percentageAmount / 100.0f);
-        } else if(config.getString("lossType").equalsIgnoreCase("fixed")) {
-            withdrawAmount = config.getInt("amountLost");
+        if(currentBalance >= config.getInt("minimumBalance")) {
+            if(config.getString("lossType").equalsIgnoreCase("percentage")) {
+                int percentageAmount = config.getInt("percentageLost");
+                withdrawAmount = currentBalance * (percentageAmount / 100.0f);
+            } else if(config.getString("lossType").equalsIgnoreCase("fixed")) {
+                withdrawAmount = config.getInt("amountLost");
+            }
+
+            econ.withdrawPlayer(p, withdrawAmount);
+
+            p.sendMessage(ChatColor.translateAlternateColorCodes('&', config.getString("prefix")) + ChatColor.translateAlternateColorCodes('&', config.getString("deathMessage")).replace("%amount%", String.valueOf((int) withdrawAmount)));
         }
-
-        econ.withdrawPlayer(p, withdrawAmount);
-
-        p.sendMessage(ChatColor.translateAlternateColorCodes('&', config.getString("prefix")) + ChatColor.translateAlternateColorCodes('&', config.getString("deathMessage")).replace("%amount%", String.valueOf((int) withdrawAmount)));
     }
 }

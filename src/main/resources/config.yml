@@ -14,6 +14,11 @@ percentageLost: 50
 # Only used if lossType is set to "fixed"
 amountLost: 100
 
+# The minimum balance player has to have in order to lose money on death
+# If you want the penalty to apply on death regardless of the player's balance,
+# setting this to 0 will effectively mean that this option is disabled
+minimumBalance: 1000
+
 # Messages
 prefix: "&6[&c&lDP&6]&r "
 reloadConfig: "&bThe config has been reloaded."
