@@ -11,3 +11,5 @@ commands:
 permissions:
   deathpenalty.reload:
     description: Allows you to use /dpreload
+  deathpenalty.bypass:
+    description: Allows you to bypass the death penalty

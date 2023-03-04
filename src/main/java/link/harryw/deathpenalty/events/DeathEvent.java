@@ -24,6 +24,10 @@ public class DeathEvent implements Listener {
         Player p = e.getEntity().getPlayer();
         FileConfiguration config = plugin.getConfig();
 
+        if(p.hasPermission("deathpenalty.bypass")) {
+            return;
+        }
+
         double currentBalance = econ.getBalance(p);
         double withdrawAmount = 0.0f;
 
