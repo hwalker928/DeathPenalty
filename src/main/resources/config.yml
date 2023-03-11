@@ -23,3 +23,4 @@ minimumBalance: 1000
 prefix: "&6[&c&lDP&6]&r "
 reloadConfig: "&bThe config has been reloaded."
 deathMessage: "&cYou died and lost &7$%amount%&c!"
+belowMinimumBalance: "&cYou got away from the death penalty this time."
