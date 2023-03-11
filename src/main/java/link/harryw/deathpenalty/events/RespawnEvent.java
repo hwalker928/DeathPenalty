@@ -40,6 +40,8 @@ public class RespawnEvent implements Listener {
             econ.withdrawPlayer(p, withdrawAmount);
 
             p.sendMessage(ChatColor.translateAlternateColorCodes('&', config.getString("prefix")) + ChatColor.translateAlternateColorCodes('&', config.getString("deathMessage")).replace("%amount%", String.valueOf((int) withdrawAmount)));
+        } else {
+            p.sendMessage(ChatColor.translateAlternateColorCodes('&', config.getString("prefix")) + ChatColor.translateAlternateColorCodes('&', config.getString("belowMinimumBalance")));
         }
     }
 }
